@@ -1,0 +1,295 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+/*
+* Main
+*/
+
+
+a,
+img,
+svg,
+span,
+label,
+input,
+button {
+    transition: 0.5s;
+}
+
+body {
+    font-family: 'Raleway', sans-serif;
+    color: var(--COLOR_TEXT1);
+    font-size: 16px;
+    line-height: 22px;
+    font-weight: normal;
+    font-feature-settings: 'pnum' on, 'lnum' on;
+}
+
+.container{
+    display: block;
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    width: 1200px;
+
+}
+
+a {
+    color: var(--COLOR_MAIN1);
+}
+
+
+/*
+* Header
+*/
+
+.header-wrap{
+	background: var(--COLOR_BG1);
+	box-shadow: 0px 4px 33px rgba(0, 0, 0, 0.04);
+}
+
+.header{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	flex-direction: row;
+	height: 80px;
+}
+
+.header-logo{
+	width: 280px;
+}
+
+.header-menu{
+	display: flex;
+	justify-content: start;
+	align-items: center;
+	flex-direction: row;
+	width: 650px;
+}
+
+.header-menu__itme{
+	color: var(--COLOR_TEXT1);
+	margin: 10px;
+	font-weight: 600;
+}
+
+.header-phone{
+	width: 121px;
+}
+
+.header-phone a{
+	font-weight: 700;
+	font-style: normal;
+}
+
+.header-cart{
+	background: var(--COLOR_MAIN1);
+	width: 40px;
+	height: 40px;
+	border-radius: 50%;
+	position: relative;
+	display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.header-cart__count{
+	position: absolute;
+	width: 20px;
+	height: 20px;
+	color: var(--COLOR_TEXT3);
+	background-color: var(--COLOR_BG4);
+	border-radius: 50%;
+    top: -7px;
+    right: -7px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 13px;
+}
+
+/*
+* Sidebar
+*/
+
+.sidebar{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: start;
+	background: var(--COLOR_BG2);
+	width: 280px;
+}
+
+.sidebar__item{
+	font-size: 14px;
+	color: var(--COLOR_TEXT1);
+	padding: 20px 50px;
+	width: 100%;
+	font-weight: 500;
+}
+
+.sidebar__item-active{
+	background: var(--COLOR_BG1);
+	color: var(--COLOR_MAIN1);
+}
+
+/*
+* Page Inner
+*/
+
+.page-content{
+	display: flex;
+    flex-direction: row;
+    justify-content: start;
+    align-items: start;
+}
+
+.page-inner{
+	width: 920px;
+}
+
+
+/*
+* 404
+*/
+
+.page-404{
+	padding-left: 190px;
+	position: relative;
+}
+
+.page-404 h1{
+	font-weight: bold;
+	font-size: 151px;
+	line-height: 100%;
+	color: var(--COLOR_MAIN1);
+}
+
+.page-404 p{
+	font-weight: 500;
+}
+
+.menu-404{
+	display: flex;
+	flex-direction: column;
+	margin-top: 30px;
+}
+
+.menu-404 .menu-404__title{
+	font-weight: 600;
+	font-size: 16px;
+}
+
+.menu-404__item{
+	margin: 7px 0;
+}
+
+.page-404__image {
+	position: absolute;
+	top: 180px;
+	right: -85px;
+}
+
+/*
+* Footer
+*/
+
+.footer-wrap{
+	background: var(--COLOR_MAIN1);
+}
+
+.footer{
+	display: flex;
+    align-items: start;
+    justify-content: space-between;
+    color: var(--COLOR_TEXT3);
+    padding: 60px 0;
+}
+
+.footer a{
+	color: var(--COLOR_TEXT3);
+}
+
+.footer__item{
+	width: 280px;
+}
+
+.footer-contact,
+.footer-menu,
+.footer-services{
+	display: flex;
+    justify-content: start;
+    align-items: start;
+    flex-direction: column;
+    height: 300px;
+    position: relative;
+}
+
+.footer-contact-wrap{
+	margin-top: 30px;
+}
+
+.footer-contact__phone{
+	font-style: normal;
+	font-weight: 600;
+	font-size: 20px;
+	line-height: 23px;
+	letter-spacing: 0.02em;
+	margin-top: 13px;
+	display: block;
+}
+
+.footer-contact__button{
+	font-weight: 600;
+	font-size: 20px;
+	line-height: 23px;
+	color: var(--COLOR_MAIN1);
+	background: var(--COLOR_BG1);
+	border-radius: 4px;
+    padding: 11px 20px;
+    margin: 20px 0;
+    display: block;
+    cursor: pointer;
+}
+
+.footer-contact__title{
+	font-weight: 600;
+	font-size: 18px;
+	line-height: 21px;
+}
+
+.footer-contact__email{
+	font-weight: bold;
+	font-size: 15px;
+	line-height: 18px;
+}
+
+.footer-contact__copyright{
+	font-weight: 600;
+	font-size: 13px;
+	line-height: 19px;
+	position: absolute;
+	bottom: 0px;
+}
+
+
+.footer-menu__item,
+.footer-services__item{
+	font-weight: 600;
+	font-size: 15px;
+	line-height: 19px;
+	padding: 8px 0;
+}
+
+.footer-menu img{
+	margin-bottom: 10px;
+}
+
+.footer-services__title{
+	font-weight: bold;
+	font-size: 18px;
+	line-height: 19px;
+	margin-top: 13px;
+    margin-bottom: 10px;
+}
