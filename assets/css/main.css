@@ -108,6 +108,30 @@ a {
     font-size: 13px;
 }
 
+
+/*
+* Breadcrumbs
+*/
+
+
+.breadcrumbs{
+	font-size: 13px;
+	line-height: 15px;
+	margin-bottom: 50px;
+}
+
+.breadcrumbs a{
+	font-weight: 600;
+	color: var(--COLOR_TEXT6);
+
+}
+
+.breadcrumbs span{
+	font-weight: bold;
+	color: var(--COLOR_TEXT7);
+}
+
+
 /*
 * Sidebar
 */
@@ -236,6 +260,98 @@ a {
 	font-weight: 500;
 	font-size: 18px;
 	line-height: 21px
+}
+
+
+/*
+* Catalog
+*/
+
+.page-catalog{
+	padding-left: 30px;
+	padding-top: 40px;
+}
+
+.page-catalog h1{
+	font-weight: bold;
+	font-size: 36px;
+	line-height: 42px;
+}
+
+.page-title-wrap{
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	margin-bottom: 30px;
+}
+
+.search-form{
+	width: 380px;
+	position: relative;
+}
+
+.search-form input{
+	border: 1px solid var(--COLOR_BORDER1);
+	box-sizing: border-box;
+	border-radius: 4px;
+	padding: 12px 20px;
+    width: 100%;
+    font-size: 13px;
+}
+
+.search-form button{
+	background: var(--COLOR_BG1);
+	position: absolute;
+    top: 12px;
+    right: 15px;
+}
+
+.catalog-filter-tag{
+	display: flex;
+	flex-wrap: wrap;
+	margin-bottom: 40px;
+}
+
+.catalog-filter-tag_item{
+	display: flex;
+    justify-content: center;
+    align-items: center;
+	padding: 8px 15px;
+    border-radius: 4px;
+	font-weight: 600;
+	font-size: 14px;
+	line-height: 16px;
+	background: var(--COLOR_BG5);
+	margin: 10px 10px 7px 0px;
+	cursor: pointer;
+}
+
+.catalog-filter-tag_item-active{
+	background: var(--COLOR_MAIN1);
+	color: var(--COLOR_TEXT3);
+}
+
+.catalog-filter-tag_item img{
+	margin-left: 7px;
+	display: none;
+}
+
+.catalog-filter-tag_item-active img{
+	display: block;
+}
+
+.catalog-filter-attribute{
+	display: flex;
+}
+
+.catalog-filter-attribute_item{
+	width: 200px;
+}
+
+.catalog-filter-attribute_item p{
+	font-weight: 600;
+	font-size: 18px;
+	line-height: 21px;
 }
 
 
