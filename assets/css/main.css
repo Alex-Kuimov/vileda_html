@@ -183,6 +183,7 @@ a {
 
 .menu-404__item{
 	margin: 7px 0;
+	font-weight: 600;
 }
 
 .page-404__image {
@@ -190,6 +191,30 @@ a {
 	top: 180px;
 	right: -85px;
 }
+
+
+/*
+* Thanks
+*/
+
+.page-thanks{
+	padding-left: 190px;
+	text-align: center;
+	margin-top: 100px;
+}
+
+.page-thanks h1{
+	font-weight: 600;
+	font-size: 34px;
+	color: var(--COLOR_MAIN1);
+}
+
+.page-thanks p{
+	font-weight: 500;
+	font-size: 20px;
+	line-height: 140%;
+}
+
 
 /*
 * Footer
