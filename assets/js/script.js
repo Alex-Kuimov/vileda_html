@@ -43,6 +43,36 @@ jQuery(document).ready(($) => {
                 },
             });
 
+            var productGroupSlider1 = new Swiper('#product-group-slider1', {
+                loop: false,
+                slidesPerView: 3,
+
+                navigation: {
+                    nextEl: '.slider-button-next1',
+                    prevEl: '.slider-button-prev1',
+                },
+            });
+
+            var productGroupSlider2 = new Swiper('#product-group-slider2', {
+                loop: false,
+                slidesPerView: 3,
+
+                navigation: {
+                    nextEl: '.slider-button-next2',
+                    prevEl: '.slider-button-prev2',
+                },
+            });
+
+            var productGroupSlider3 = new Swiper('#product-group-slider3', {
+                loop: false,
+                slidesPerView: 3,
+
+                navigation: {
+                    nextEl: '.slider-button-next3',
+                    prevEl: '.slider-button-prev3',
+                },
+            });
+
         },
 
         init: function() {
