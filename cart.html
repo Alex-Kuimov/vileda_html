@@ -107,7 +107,7 @@
 						<div class="cart-order">
 							<h3>Сумма к оплате:</h3>
 							<p>930.00 ₽</p>
-							<button class="button button-buy-click">Купить в 1 клик</button>
+							<button class="button button-buy-click show-modal">Купить в 1 клик</button>
 							<button class="button checkout-button">Оформить заказ</button>
 						</div>	
 					</div>
@@ -149,6 +149,17 @@
 				<a href="#" class="footer-services__item">Работа с документацией в сфере клининга на предприятии</a>
 			</div>	
 		</div>
+	</div>	
+
+	<div class="modal-cover close-modal">
+		<form class="modal modal-buy">
+			<h3>Покупка в 1 клик</h3>
+			<input type="text" name="checkout-name" class="checkout-name checkout-input" placeholder="Имя" required="">
+			<input type="text" name="checkout-phone" class="checkout-phone checkout-input" placeholder="Телефон" required="">
+			<input type="text" name="checkout-city" class="checkout-city checkout-input" placeholder="Город" required="">
+			<button class="button button-buy">Купить</button>
+			<p>Нажимая кнопку «Купить», Вы соглашаетесь c правилами <a href="#">Политики конфиденциальности Компании</a></p>
+		</form>
 	</div>	
 
 	<link rel="stylesheet" href="assets/css/swiper.css">
