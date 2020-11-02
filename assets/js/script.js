@@ -56,15 +56,14 @@ jQuery(document).ready(($) => {
         filterToggle: function(e){
             let action = $(this).attr('action');
 
-
             if(action == 'hide'){
                 $(this).attr('action', 'show');
                 $(this).html('Показать фильтры');
-                $('.catalog-filter').fadeOut(300);
+                $('.catalog-filter').slideUp(300);
             } else {
                 $(this).attr('action', 'hide');
                 $(this).html('Скрыть фильтры');
-                $('.catalog-filter').fadeIn(300);
+                $('.catalog-filter').slideDown(300);
             }
 
         },
