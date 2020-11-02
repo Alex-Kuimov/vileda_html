@@ -7,6 +7,10 @@ jQuery(document).ready(($) => {
         actions: function(){
             $('.close-modal').on('click', frontEnd.closeModal);
             $('.show-modal').on('click', frontEnd.showModal);
+            $('.catalog-filter-tag_item').on('click', frontEnd.addTag);
+            $('.remove-tag').on('click', frontEnd.removeTag);
+            $('.catalog-filter-action').on('click', frontEnd.filterToggle);
+            $('.catalog-filter-btn-reset').on('click', frontEnd.filterReset);
 
             $('.catlog-item').on('mouseenter', frontEnd.showBtn);
             $('.catlog-item').on('mouseleave', frontEnd.hideBtn);
@@ -17,14 +21,51 @@ jQuery(document).ready(($) => {
             let contentWidth = $('.page-inner').innerHeight(),
                 sidebartWidth = 872;
 
-                console.log(contentWidth);
-                console.log(sidebartWidth);
-
             if(contentWidth <= sidebartWidth){
                 $('.sidebar').addClass('scroll-sidebar');
                 $('.sidebar').scrollbar();
 
             }    
+
+        },
+
+        addTag: function(e){
+            let target = e.target.className;
+
+            if(target.includes('catalog-filter-tag_item-active')){
+                $(this).removeClass('catalog-filter-tag_item-active');
+            } else {
+                $(this).addClass('catalog-filter-tag_item-active');
+            }
+            return false;
+        },
+
+        removeTag: function(e){
+            $(this).parent().removeClass('catalog-filter-tag_item-active');
+            return false;
+        },
+
+        filterReset: function(e){
+
+            $('.catalog-filter-tag_item').removeClass('catalog-filter-tag_item-active');
+            $('.catalog-filter-attribute-checkbox').prop('checked', false);
+
+            return false;
+        },
+
+        filterToggle: function(e){
+            let action = $(this).attr('action');
+
+
+            if(action == 'hide'){
+                $(this).attr('action', 'show');
+                $(this).html('Показать фильтры');
+                $('.catalog-filter').fadeOut(300);
+            } else {
+                $(this).attr('action', 'hide');
+                $(this).html('Скрыть фильтры');
+                $('.catalog-filter').fadeIn(300);
+            }
 
         },
 
@@ -118,11 +159,13 @@ jQuery(document).ready(($) => {
         showBtn: function(){
             let itemID = $(this).attr('id');
             $('#' + itemID + ' .catlog-item__button').addClass('show');
+            $('#' + itemID + ' .catlog-item-image img').addClass('zoom');
         },
 
         hideBtn: function(){
             let itemID = $(this).attr('id');
             $('#' + itemID + ' .catlog-item__button').removeClass('show');
+            $('#' + itemID + ' .catlog-item-image img').removeClass('zoom');
         },
 
         init: function(){

@@ -36,6 +36,13 @@ a {
     opacity: 0!important;
 }
 
+.zoom {
+    -webkit-transform: scale(1.2);
+    -moz-transform: scale(1.2);
+    -o-transform: scale(1.2);
+    transform: scale(1.2);
+}
+
 
 /*
 * Header
@@ -602,18 +609,19 @@ a {
 .catalog-list__item, 
 .catlog-item{
 	width: 275px;
-	height: 400px;
+	height: 395px;
 	box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.10);
 	border-radius: 4px;
 	margin-right: 20px;
 	margin-bottom: 20px;
 	padding: 20px;
 	position: relative;
-	transition: 0.3s;
+	transition: 0.5s;
 }
 
 .catlog-item:hover{
 	box-shadow: 0px 0px 16px rgba(0, 0, 0, 0.26);
+	height: 400px;
 }
 
 .catlog-item-image{
@@ -627,6 +635,7 @@ a {
 .catlog-item img{
     object-fit: cover;
     width: 100%;
+    transition: 0.5s;
 }
 
 .catlog-item__button{
@@ -1615,7 +1624,7 @@ a {
     opacity: 0.4;
 }
  
-.scrollbar-inner > .scroll-element .scroll-element_track { background-color: #f8f8f8!important; }
+.scrollbar-inner > .scroll-element .scroll-element_track { background-color: transparent!important; }
 .scrollbar-inner > .scroll-element .scroll-bar { background-color: #737373!important; }
 .scrollbar-inner > .scroll-element:hover .scroll-bar { background-color: #919191; }
 .scrollbar-inner > .scroll-element.scroll-draggable .scroll-bar { background-color: #919191; }
