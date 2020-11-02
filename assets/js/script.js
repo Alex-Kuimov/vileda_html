@@ -14,19 +14,20 @@ jQuery(document).ready(($) => {
 
             $('.catlog-item').on('mouseenter', frontEnd.showBtn);
             $('.catlog-item').on('mouseleave', frontEnd.hideBtn);
+
+            $('.minus').on('click', frontEnd.productCounter);
+            $('.plus').on('click', frontEnd.productCounter);
+
         },
 
         scroll: function(){
-
             let contentWidth = $('.page-inner').innerHeight(),
                 sidebartWidth = 872;
 
             if(contentWidth <= sidebartWidth){
                 $('.sidebar').addClass('scroll-sidebar');
                 $('.sidebar').scrollbar();
-
             }    
-
         },
 
         addTag: function(e){
@@ -65,7 +66,6 @@ jQuery(document).ready(($) => {
                 $(this).html('Скрыть фильтры');
                 $('.catalog-filter').slideDown(300);
             }
-
         },
 
         sliders: function(){
@@ -140,6 +140,24 @@ jQuery(document).ready(($) => {
                     prevEl: '.slider-button-prev3',
                 },
             });
+        },
+
+        productCounter: function(){
+            let action = $(this).attr('data-action'),
+                itemID = $(this).attr('data-id'),
+                count  = parseInt($('#count-'+itemID).val());
+
+            if(action == 'minus'){
+                if(count>1){
+                    count = count - 1; 
+                }
+            }
+
+            if(action == 'plus'){
+                count = count + 1; 
+            }
+
+            $('#count-'+itemID).val(count);
         },
 
         closeModal: function(e){
