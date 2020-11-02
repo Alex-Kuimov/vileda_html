@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="assets/css/normalize.css">
     <link rel="stylesheet" href="assets/css/main.css">
     <link rel="stylesheet" href="assets/css/media.css">
+    <link rel="stylesheet" href="assets/css/jquery.scrollbar.css">
 </head>
 
 <body>
@@ -39,7 +40,7 @@
 
 	<div class="container">
 		<div class="page-content">
-			<div class="sidebar">
+			<div class="sidebar scrollbar-inner">
 				<a href="#" class="sidebar__item">Мопы</a>
 				<a href="#" class="sidebar__item">Салфетки</a>
 				<a href="#" class="sidebar__item sidebar__item-active">Перчатки</a>
@@ -52,6 +53,7 @@
 				<a href="#" class="sidebar__item">Губки</a>
 				<a href="#" class="sidebar__item">Контейнеры для мусора и крышки</a>
 				<a href="#" class="sidebar__item">Ручки и держатели</a>
+				<a href="#" class="sidebar__item">Профессиональная химия Dr.Schnell</a>
 			</div>
 			
 			<div class="page-inner page-catalog">
@@ -135,17 +137,19 @@
 
 				<p class="catalog-filter-price">Цена <img src="assets/img/arrow.png"></p>
 				<div class="catalog-list">
-					<a href="#" class="catalog-list__item catlog-item show-modal">
+					<a href="#" class="catalog-list__item catlog-item" id="catlog-item-1">
 						<div class="catlog-item-image">
 							<img src="assets/img/tmp/p01.jpg">
+							<span class="button catlog-item__button show-modal">В корзину</span>
 						</div>	
 						<span class="catlog-list__sku">571885</span>
 						<p class="catlog-list__title">MILIZID 1л Средство для удаления жировых загрязнений смягчитель для стирки</p>
 						<p class="catlog-list__price">930.00 ₽</p>
 					</a>	
-					<a href="#" class="catalog-list__item catlog-item">
+					<a href="#" class="catalog-list__item catlog-item" id="catlog-item-2">
 						<div class="catlog-item-image">
 							<img src="assets/img/tmp/p02.jpg">
+							<span class="button catlog-item__button show-modal">В корзину</span>
 						</div>	
 						<span class="catlog-list__sku">571885</span>
 						<p class="catlog-list__title">MILIZID 1л Средство для удаления жировых загрязнений смягчитель для стирки</p>
@@ -154,33 +158,37 @@
 							<p class="catlog-list__price">930.00 ₽</p>
 						</div>	
 					</a>	
-					<a href="#" class="catalog-list__item catlog-item">
+					<a href="#" class="catalog-list__item catlog-item" id="catlog-item-3">
 						<div class="catlog-item-image">
 							<img src="assets/img/tmp/p03.jpg">
+							<span class="button catlog-item__button show-modal">В корзину</span>
 						</div>	
 						<span class="catlog-list__sku">571885</span>
 						<p class="catlog-list__title">MILIZID 1л Средство для удаления жировых загрязнений смягчитель для стирки</p>
 						<p class="catlog-list__price">930.00 ₽</p>
 					</a>	
-					<a href="#" class="catalog-list__item catlog-item">
+					<a href="#" class="catalog-list__item catlog-item" id="catlog-item-4">
 						<div class="catlog-item-image">
 							<img src="assets/img/tmp/p01.jpg">
+							<span class="button catlog-item__button show-modal">В корзину</span>
 						</div>	
 						<span class="catlog-list__sku">571885</span>
 						<p class="catlog-list__title">MILIZID 1л Средство для удаления жировых загрязнений смягчитель для стирки</p>
 						<p class="catlog-list__price">930.00 ₽</p>
 					</a>	
-					<a href="#" class="catalog-list__item catlog-item">
+					<a href="#" class="catalog-list__item catlog-item" id="catlog-item-5">
 						<div class="catlog-item-image">
 							<img src="assets/img/tmp/p02.jpg">
+							<span class="button catlog-item__button show-modal">В корзину</span>
 						</div>	
 						<span class="catlog-list__sku">571885</span>
 						<p class="catlog-list__title">MILIZID 1л Средство для удаления жировых загрязнений смягчитель для стирки</p>
 						<p class="catlog-list__price">930.00 ₽</p>
 					</a>	
-					<a href="#" class="catalog-list__item catlog-item">
+					<a href="#" class="catalog-list__item catlog-item" id="catlog-item-6">
 						<div class="catlog-item-image">
 							<img src="assets/img/tmp/p03.jpg">
+							<span class="button catlog-item__button show-modal">В корзину</span>
 						</div>	
 						<span class="catlog-list__sku">571885</span>
 						<p class="catlog-list__title">MILIZID 1л Средство для удаления жировых загрязнений смягчитель для стирки</p>
@@ -292,6 +300,7 @@
 	<script defer src="assets/js/swiper.js"></script>
 	<script defer src="assets/js/jquery-3.5.1.js"></script>
 	<script defer src="assets/js/fancybox.js"></script>
+	<script defer src="assets/js/jquery.scrollbar.js"></script>
 	<script defer src="assets/js/script.js"></script>
 
 </body>

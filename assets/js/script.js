@@ -4,13 +4,31 @@ jQuery(document).ready(($) => {
 
     let frontEnd = {
 
-        actions: function() {
+        actions: function(){
             $('.close-modal').on('click', frontEnd.closeModal);
             $('.show-modal').on('click', frontEnd.showModal);
 
+            $('.catlog-item').on('mouseenter', frontEnd.showBtn);
+            $('.catlog-item').on('mouseleave', frontEnd.hideBtn);
         },
 
-        sliders: function() {
+        scroll: function(){
+
+            let contentWidth = $('.page-inner').innerHeight(),
+                sidebartWidth = 872;
+
+                console.log(contentWidth);
+                console.log(sidebartWidth);
+
+            if(contentWidth <= sidebartWidth){
+                $('.sidebar').addClass('scroll-sidebar');
+                $('.sidebar').scrollbar();
+
+            }    
+
+        },
+
+        sliders: function(){
             var productPageSliderThumbs = new Swiper('.product-slider-thumbs', {
                 direction: 'vertical',
                 slidesPerView: 4,
@@ -97,9 +115,20 @@ jQuery(document).ready(($) => {
             return false;
         },
 
-        init: function() {
+        showBtn: function(){
+            let itemID = $(this).attr('id');
+            $('#' + itemID + ' .catlog-item__button').addClass('show');
+        },
+
+        hideBtn: function(){
+            let itemID = $(this).attr('id');
+            $('#' + itemID + ' .catlog-item__button').removeClass('show');
+        },
+
+        init: function(){
             frontEnd.actions();
             frontEnd.sliders();
+            frontEnd.scroll();
         },
 
     }
