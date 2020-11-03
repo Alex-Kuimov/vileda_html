@@ -27,7 +27,6 @@ a {
     color: var(--COLOR_MAIN1);
 }
 
-
 .show {
     opacity: 1!important;
 }
@@ -46,6 +45,10 @@ a {
 .disable{
 	background: var(--COLOR_BG6)!important;
 	pointer-events: none;
+}
+
+.display-none{
+	display: none;
 }
 
 
@@ -1013,6 +1016,19 @@ a {
 	margin-top: 40px;
 }
 
+#product-tab1 h2 {
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 21px;
+    margin-bottom: 30px;
+}
+
+#product-tab1 p{
+	font-weight: 500;
+    font-size: 13px;
+    line-height: 146.1%;
+}
+
 #product-tab2{
 	width: 50%;
 }
@@ -1225,6 +1241,17 @@ a {
     justify-content: center;
     align-items: center;
     cursor: pointer;
+    flex-direction: column;
+}
+
+.close-modal-product-wrap{
+	width: 670px;
+	text-align: right;
+}
+
+.close-modal-buy-wrap{
+	width: 500px;
+	text-align: right;
 }
 
 .modal-buy{

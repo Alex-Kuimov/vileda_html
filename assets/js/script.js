@@ -22,6 +22,8 @@ jQuery(document).ready(($) => {
 
             $('body').on('keyup', '.count', frontEnd.productCounter);
 
+            $('.product-tab-title__item').on('click', frontEnd.tabs);
+
         },
 
         scroll: function(){
@@ -222,6 +224,14 @@ jQuery(document).ready(($) => {
             let itemID = $(this).attr('id');
             $('#' + itemID + ' .catlog-item__button').removeClass('show');
             $('#' + itemID + ' .catlog-item-image img').removeClass('zoom');
+        },
+
+        tabs: function(){
+            let itemID = $(this).attr('data-id');
+            $('.product-tab-title__item').removeClass('active');
+            $(this).addClass('active');
+            $('.product-tab__item').addClass('display-none');
+            $('#'+itemID).removeClass('display-none');
         },
 
         init: function(){
