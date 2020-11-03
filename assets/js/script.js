@@ -7,8 +7,10 @@ jQuery(document).ready(($) => {
         actions: function(){
             $('.close-modal').on('click', frontEnd.closeModal);
             $('.show-modal').on('click', frontEnd.showModal);
+
             $('.catalog-filter-tag_item').on('click', frontEnd.addTag);
             $('.remove-tag').on('click', frontEnd.removeTag);
+
             $('.catalog-filter-action').on('click', frontEnd.filterToggle);
             $('.catalog-filter-btn-reset').on('click', frontEnd.filterReset);
 
@@ -17,6 +19,8 @@ jQuery(document).ready(($) => {
 
             $('.minus').on('click', frontEnd.productCounter);
             $('.plus').on('click', frontEnd.productCounter);
+
+            $('body').on('keyup', '.count', frontEnd.productCounter);
 
         },
 
@@ -142,22 +146,57 @@ jQuery(document).ready(($) => {
             });
         },
 
-        productCounter: function(){
+        productCounter: function(e){
+
+
             let action = $(this).attr('data-action'),
                 itemID = $(this).attr('data-id'),
-                count  = parseInt($('#count-'+itemID).val());
+                price = parseFloat($('#price-'+itemID).attr('data-price')),
+                min = parseInt($('#count-'+itemID).attr('data-min')),
+                count = parseInt($('#count-'+itemID).val()),
+                total = parseFloat($('#price-'+itemID).attr('data-price'));
 
-            if(action == 'minus'){
-                if(count>1){
-                    count = count - 1; 
+            if(e.type == 'keyup'){
+                $(this).val($(this).val().replace(/[^\d/,]/, ''));
+            }
+
+            if(e.type == 'click'){
+           
+                if(action == 'minus'){
+                    if(count > min){
+                        count = count - 1; 
+                    }
                 }
-            }
 
-            if(action == 'plus'){
-                count = count + 1; 
-            }
+                if(action == 'plus'){
+                    count = count + 1; 
+                    $('#minus-'+itemID).removeClass('disable');
+                }
+            }    
 
-            $('#count-'+itemID).val(count);
+            if(count >= min){
+
+                $('#minus-'+itemID).removeClass('disable');
+
+                total = price * count;
+
+                total = total.toFixed(2).replace(/\d(?=(\d{3})+\.)/g, '$& '); 
+                total = total.replace('.00', '');   
+
+                $('#count-'+itemID).val(count);
+                $('#price-'+itemID).html(total);
+
+                $('.add-to-cart').removeClass('disable');
+            } else {
+
+                $('#minus-'+itemID).addClass('disable');
+                $('.add-to-cart').addClass('disable');
+                
+            } 
+
+            if(count == min){
+                $('#minus-'+itemID).addClass('disable');
+            }
         },
 
         closeModal: function(e){
