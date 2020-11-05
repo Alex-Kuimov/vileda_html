@@ -52,11 +52,6 @@ a {
 }
 
 
-input:placeholder-shown{
-	color: transparent;
-	transition: 0.1s;
-}
-
 input:focus::placeholder {
 	color: transparent;
 	transition: 0.1s;
