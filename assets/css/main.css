@@ -52,12 +52,14 @@ a {
 }
 
 
-.checkout-form input:focus::placeholder {
+.checkout-form input:focus::placeholder,
+.search-form input:focus::placeholder {
 	color: transparent;
 	transition: 0.1s;
 }  
 
-.checkout-form input:not(:placeholder-shown) {
+.checkout-form input:not(:placeholder-shown),
+.search-form input:not(:placeholder-shown) {
  	border-bottom: 1px solid var(--COLOR_BORDER4);
  	transition: 0.1s;
 }
