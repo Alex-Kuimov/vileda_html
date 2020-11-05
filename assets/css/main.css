@@ -52,12 +52,12 @@ a {
 }
 
 
-input:focus::placeholder {
+.checkout-form input:focus::placeholder {
 	color: transparent;
 	transition: 0.1s;
 }  
 
-input:not(:placeholder-shown) {
+.checkout-form input:not(:placeholder-shown) {
  	border-bottom: 1px solid var(--COLOR_BORDER4);
  	transition: 0.1s;
 }
@@ -815,6 +815,8 @@ input:not(:placeholder-shown) {
 	margin-bottom: 10px;
 	position: relative;
 	cursor: pointer;
+	font-weight: 500;
+	font-size: 15px;
 }
 
 .checkout-pay,
