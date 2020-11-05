@@ -24,6 +24,8 @@ jQuery(document).ready(($) => {
 
             $('.product-tab-title__item').on('click', frontEnd.tabs);
 
+            $('.catalog-filter-price').on('click', frontEnd.selectShow);
+            $('.catalog-filter-price__item').on('click', frontEnd.selectHide);
         },
 
         scroll: function(){
@@ -150,7 +152,6 @@ jQuery(document).ready(($) => {
 
         productCounter: function(e){
 
-
             let action = $(this).attr('data-action'),
                 itemID = $(this).attr('data-id'),
                 price = parseFloat($('#price-'+itemID).attr('data-price')),
@@ -232,6 +233,23 @@ jQuery(document).ready(($) => {
             $(this).addClass('active');
             $('.product-tab__item').addClass('display-none');
             $('#'+itemID).removeClass('display-none');
+        },
+
+        selectShow: function(){
+            let positon = $(this).attr('data-position');
+
+            if(positon == 'hide'){
+                $(this).attr('data-position', 'show');
+                $('.catalog-filter-price-wrap').slideDown(300);
+            } else{
+                $(this).attr('data-position', 'hide');
+                $('.catalog-filter-price-wrap').slideUp(300);
+            }
+
+        },
+
+        selectHide: function(){
+            $('.catalog-filter-price-wrap').slideUp(300);
         },
 
         init: function(){

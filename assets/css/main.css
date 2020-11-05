@@ -589,11 +589,34 @@ a {
 	margin-bottom: 30px;
 }
 
+.catalog-sort-filter{
+	position: relative;
+}
+
 .catalog-filter-price{
 	font-weight: 600;
 	font-size: 16px;
 	line-height: 19px;
 	margin-bottom: 30px;
+	cursor: pointer;
+}
+
+.catalog-filter-price-wrap{
+	width: 165px;
+    background: var(--COLOR_BG2);
+    box-shadow: 0px 0px 16px rgba(0, 0, 0, 0.26);
+    border-radius: 4px; 
+    position: absolute;
+    z-index: 10;
+    top: 35px;
+    display: none;
+}
+
+.catalog-filter-price__item{
+	padding: 15px;
+	font-weight: 600;
+    font-size: 14px;
+    cursor: pointer;
 }
 
 .catalog-description{
