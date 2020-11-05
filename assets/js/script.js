@@ -241,15 +241,18 @@ jQuery(document).ready(($) => {
             if(positon == 'hide'){
                 $(this).attr('data-position', 'show');
                 $('.catalog-filter-price-wrap').slideDown(300);
+                $('.catalog-filter-price img').removeClass('rotate');
             } else{
                 $(this).attr('data-position', 'hide');
                 $('.catalog-filter-price-wrap').slideUp(300);
+                $('.catalog-filter-price img').addClass('rotate');
             }
 
         },
 
         selectHide: function(){
             $('.catalog-filter-price-wrap').slideUp(300);
+            $('.catalog-filter-price img').addClass('rotate');
         },
 
         init: function(){
