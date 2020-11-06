@@ -1478,6 +1478,12 @@ a {
 	text-align: right;
 }
 
+.close-modal-product-wrap img,
+.close-modal-buy-wrap img{
+	width: 24px;
+	height: 24px;
+}
+
 .modal-buy{
 	z-index: 101;
 	width: 345px;
