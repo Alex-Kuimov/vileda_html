@@ -88,17 +88,6 @@ jQuery(document).ready(($) => {
                 }
             });
 
-            var modalProductSliderThumbs = new Swiper('.modal-product-slider-thumbs', {
-                direction: 'vertical',
-                slidesPerView: 3,
-            });
-
-            var modalProductSlider = new Swiper('.modal-product-slider', {
-                thumbs: {
-                    swiper: modalProductSliderThumbs
-                }
-            });
-
             var productListSlider1 = new Swiper('#product-list-slider1', {
                 loop: false,
                 slidesPerView: 4,
@@ -212,6 +201,19 @@ jQuery(document).ready(($) => {
 
         showModal: function(){
             $('.modal-cover').fadeIn('500').css('display', 'flex');
+
+
+            var modalProductSliderThumbs = new Swiper('.modal-product-slider-thumbs', {
+                direction: 'vertical',
+                slidesPerView: 3,
+            });
+
+            var modalProductSlider = new Swiper('.modal-product-slider', {
+                thumbs: {
+                    swiper: modalProductSliderThumbs
+                }
+            });
+            
             return false;
         },
 

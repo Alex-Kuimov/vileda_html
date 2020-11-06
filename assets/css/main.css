@@ -1354,6 +1354,11 @@ a {
 }
 
 
+.slider-button-wrap .swiper-button-disabled{
+	opacity: 0.8;
+	pointer-events: none;
+}
+
 /*
 * Product Group
 */
@@ -1464,7 +1469,7 @@ a {
 }
 
 .close-modal-product-wrap{
-	width: 670px;
+	width: 750px;
 	text-align: right;
 }
 
