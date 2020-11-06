@@ -30,7 +30,7 @@ jQuery(document).ready(($) => {
 
         scroll: function(){
             let contentWidth = $('.page-inner').innerHeight(),
-                sidebartWidth = 872;
+                sidebartWidth = 902;
 
             if(contentWidth <= sidebartWidth){
                 $('.sidebar').addClass('scroll-sidebar');
