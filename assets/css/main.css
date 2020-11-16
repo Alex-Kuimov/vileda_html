@@ -72,6 +72,10 @@ a {
 	margin-bottom: 100px;
 }
 
+.button{
+	cursor: pointer;
+}
+
 /*
 * Header
 */
