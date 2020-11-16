@@ -68,11 +68,11 @@ jQuery(document).ready(($) => {
             if(action == 'hide'){
                 $(this).attr('action', 'show');
                 $(this).html('Показать фильтры');
-                $('.catalog-filter').slideUp(300);
+                $('.catalog-filter').slideUp(500);
             } else {
                 $(this).attr('action', 'hide');
                 $(this).html('Скрыть фильтры');
-                $('.catalog-filter').slideDown(300);
+                $('.catalog-filter').slideDown(500);
             }
         },
 
