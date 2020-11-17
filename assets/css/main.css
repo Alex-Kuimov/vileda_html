@@ -76,6 +76,13 @@ a {
 	cursor: pointer;
 }
 
+.checkout-form,
+.page-cart-wrap,
+.catalog-filter,
+.checkout-form{
+	padding-top: 15px;
+}
+
 /*
 * Header
 */
