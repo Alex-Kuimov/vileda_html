@@ -26,6 +26,9 @@ jQuery(document).ready(($) => {
 
             $('.catalog-filter-price').on('click', frontEnd.selectShow);
             $('.catalog-filter-price__item').on('click', frontEnd.selectHide);
+
+            $('.checkout-delivery').on('click', frontEnd.delivery);
+
         },
 
         scroll: function(){
@@ -249,12 +252,23 @@ jQuery(document).ready(($) => {
                 $('.catalog-filter-price-wrap').slideUp(300);
                 $('.catalog-filter-price img').addClass('rotate');
             }
-
         },
 
         selectHide: function(){
             $('.catalog-filter-price-wrap').slideUp(300);
             $('.catalog-filter-price img').addClass('rotate');
+        },
+
+        delivery: function(){
+            let type = $(this).val();
+
+            if(type == 'pickup'){
+                $('.checkout-street').css('display', 'none');
+                $('.checkout-input-wrap').css('display', 'none');
+            } else {
+                $('.checkout-street').css('display', 'inline-block');
+                $('.checkout-input-wrap').css('display', 'flex');
+            } 
         },
 
         init: function(){
