@@ -29,16 +29,29 @@ jQuery(document).ready(($) => {
 
             $('.checkout-delivery').on('click', frontEnd.delivery);
 
+            window.onload = function () {
+                frontEnd.scroll();
+            }
+
         },
 
         scroll: function(){
-            let contentWidth = $('.page-inner').innerHeight(),
-                sidebartWidth = 902;
+            let contentWidth = $('.page-content').outerHeight(true),
+                sidebartWidth = $('.sidebar').outerHeight(true);
+
+                console.log(contentWidth);
+                console.log(sidebartWidth);
 
             if(contentWidth <= sidebartWidth){
                 $('.sidebar').addClass('scroll-sidebar');
                 $('.sidebar').scrollbar();
-            }    
+                console.log('ok1');
+            } else {
+                $('.sidebar').addClass('scroll-sidebar');
+                $('.sidebar').scrollbar();
+                $('.sidebar').css('height', contentWidth);
+                console.log('ok2');
+            }
         },
 
         addTag: function(e){
@@ -274,7 +287,6 @@ jQuery(document).ready(($) => {
         init: function(){
             frontEnd.actions();
             frontEnd.sliders();
-            frontEnd.scroll();
         },
 
     }

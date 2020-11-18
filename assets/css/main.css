@@ -1887,9 +1887,6 @@ a {
     width: 0;
 }
  
- 
- 
- 
 /*************** SIMPLE INNER SCROLLBAR ***************/
  
 .scrollbar-inner > .scroll-element,
@@ -1966,7 +1963,10 @@ a {
 	width: 6px!important;
 }
 
-
 .scroll-sidebar{
-	max-height: 820px;
+	height: 820px;
+}
+
+.sidebar{
+	height: 820px;	
 }
