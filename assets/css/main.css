@@ -777,6 +777,7 @@ a {
     height: 183px;
     overflow: hidden;
     position: relative;
+    margin-bottom: 20px;
 }
 
 .catalog-list__item img, 
@@ -1493,6 +1494,12 @@ a {
 	font-size: 13px;
 	line-height: 146.1%;
 }
+
+.product-group-wrap{
+	height: 200px;
+    margin-top: 20px;
+}
+
 
 /*
 * Modals
