@@ -504,7 +504,7 @@ a {
 .checkout-button,
 .button-buy-click{
 	width: 100%;
-	height: 56px;
+	height: 52px;
 }
 
 
@@ -1379,7 +1379,6 @@ a {
 
 .slider-button-wrap{
 	display: flex;
-	margin-bottom: 10px;
 }
 
 .slider-button-next,
